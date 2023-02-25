@@ -1,0 +1,629 @@
+/*
+"GTK2-Raleigh" LXQt theme
+By Azuma Hazuki (wandering hazuki at gmail.com)
+Created 22 February 2023
+*/
+
+LXQtPanel, LXQtPanel #BackgroundWidget {
+        color:                          #000000;
+        background:                     #dcdad5;
+}
+
+/* Panel Borders by position */
+LXQtPanel[position="Bottom"] #BackgroundWidget { border-top: 1px solid #9e9a91; }
+LXQtPanel[position="Left"] #BackgroundWidget { border-right: 1px solid #9e9a91; }
+LXQtPanel[position="Right"] #BackgroundWidget { border-left: 1px solid #9e9a91; }
+
+/* Catch-all settings for panel plugins and their subwidgets 
+   not otherwise styled in this theme: 
+   #ColorPicker
+   #Custom and #CustomButton
+   #DirectoryMenu
+   #Dom
+   #LXQtMount
+   #NetworkMonitor
+   #Sensors
+   #ShowDesktop
+   #Spacer
+*/      
+
+Plugin, Plugin > QToolButton, Plugin > QWidget > QToolButton,
+Plugin > QWidget > QToolButton > QWidget > QToolButton {
+        color:                          #000000;
+        background:                     #dcdad5;
+
+        padding:                        0px;
+        margin:				0px;
+
+        /* prevents unexpected borders/boxes on hover */
+        border:                         0px solid transparent;
+}
+
+#TaskBar,
+#DesktopSwitch,
+#WorldClock,
+#WorldClockContent {
+	color:				#000000;
+	background:			transparent;
+}
+
+#QuickLaunch,
+#QuickLaunchPlaceHolder {
+	margin-left:			2px;
+	margin-right:			2px;
+}
+
+#StatusNotifierPlugin,
+#StatusNotifierPlugin > QToolButton,
+#StatusNotifierPlugin StatusNotifierButton {
+	padding:			2px;
+	margin-left:			1px;
+}
+
+#MainMenu {
+	color:				#000000;
+	background:			#dcdad5;
+
+	qproperty-icon:			url(mainmenu.svg);
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+
+	padding-left:			3px;
+
+	font:				bold;
+}
+
+#MainMenu:hover {
+	color:				#000000;
+	background:			#eeebe7;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+}
+
+#MainMenu:pressed {
+	color:				#000000;
+	background:			#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			4px;
+}
+
+#MainMenu QLineEdit {
+	color:				#000000;
+	background:			#ffffff;
+
+	selection-color:		#ffffff;
+	selection-background-color:	#4b6983;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	margin:				2px;
+	padding:			2px;
+
+	font:				normal;
+}
+
+QMenu, 
+#MainMenu QMenu,
+#MainMenu ActionView {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(menu.png) 2;
+
+	min-width:			100px;
+
+	font:				normal;
+}
+
+QMenu QToolButton {
+	color:				#ffffff;
+	background:			#4b6983;
+
+	border:				none;
+
+	font:				bold;
+
+	padding:			3px;
+}
+
+QMenu::icon, 
+#MainMenu QMenu::icon, 
+#MainMenu ActionView::icon {
+	padding-left:			7px;
+}
+
+QMenu::indicator, 
+#MainMenu QMenu::indicator {
+	padding-left:			6px;
+}
+
+QMenu::indicator:non-exclusive { image: url(unchecked.png);}
+QMenu::indicator:non-exclusive:checked { image: url(checked.png);}
+QMenu::indicator:non-exclusive:checked:selected { image: url(checked.png);}
+QMenu::indicator:non-exclusive:unchecked { image: url(unchecked.png);}
+QMenu::indicator:non-exclusive:unchecked:selected { image: url(unchecked.png);}
+
+QMenu::item, 
+#MainMenu QMenu::item,
+#MainMenu ActionView::item {
+	padding-left:			6px;
+	padding-right:			12px;
+	padding-top:			3px;
+	padding-bottom:			3px;
+
+	color:				#000000;
+	background:			transparent;
+
+	min-width:			100px;
+}
+
+QMenu::item:selected, 
+#MainMenu QMenu::item:selected, 
+#MainMenu ActionView::item:hover,
+#MainMenu ActionView::item:selected {
+	color:				#ffffff;
+	background:			#4b6983;
+}
+
+QMenu::item:disabled, 
+#MainMenu QMenu::item:disabled,
+#MainMenu ActionView::item:disabled {
+	color:				#808080;
+	background:			transparent;
+}
+
+#TaskBar QToolButton,
+#DesktopSwitch QToolButton {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+
+	padding-left:			3px;
+	padding-right:			3px;
+}
+
+#TaskBar QToolButton:on,
+#DesktopSwitch QToolButton:on {
+	color:				#000000;
+	background-color:		#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+#TaskBar QToolButton:hover,
+#DesktopSwitch QToolButton:hover {
+	color:				#000000;
+	background:			#eeebe7;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+}
+
+#TaskBar QToolButton:pressed,
+#DesktopSwitch QToolButton:pressed {
+	color:				#000000;
+	background-color:		#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+#TaskBar QToolButton:on:hover,
+#DesktopSwitch QToolButton:on:hover {
+	color:				#000000; 
+	background-color:		#c4c2bd; 
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+#TaskBar QToolButton[urgent="true"],
+#TaskBar QToolButton[urgent="true"]:hover,
+#DesktopSwitch QToolButton[urgent="true"],
+#DesktopSwitch QToolButton[urgent="true"]:hover {
+	color:				#ffffff;
+	background:			#4b6983;
+
+	border:				2px solid transparent;
+	border-image:			url(urgent.png) 2;
+}
+
+#QuickLaunch QToolButton {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+
+	padding-left:			2px;
+	padding-right:			2px;
+}
+
+#Dom,
+#ColorPicker,
+#ShowDesktop {
+	border:				2px solid transparent;
+}
+
+#Dom:hover,
+#ColorPicker:hover,
+#ColorPickerColorButton:hover,
+#ColorPickerPickerButton:hover,
+#ShowDesktop:hover,
+#QuickLaunch QToolButton:hover {
+	border-image:			url(button.png) 2;
+}
+
+#Dom:pressed,
+#ColorPicker:pressed,
+#ColorPickerColorButton:pressed,
+#ColorPickerPickerButton:pressed,
+#ShowDesktop:pressed,
+#QuickLaunch QToolButton:pressed {
+	background:			#c4c2bd;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+#WingMenuPlugin {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+
+	qproperty-icon:			url(mainmenu.svg);
+
+	font:				bold;
+}
+
+#WingMenuPlugin:hover {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+}
+
+#WingMenuPlugin:pressed {
+	color:				#000000;
+	background:			#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+#WingMenuPlugin QWidget {
+	/* "Zero out" Wing Menu widgets */
+	color:				#000000;
+	background:			#dcdad5;
+}
+
+#WingMenuPlugin QMenu {
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(menu.png) 2;
+}
+
+#WingMenuPlugin QFrame {
+	background:			transparent;;
+}
+
+#WingMenuPlugin ApplicationsView {
+	background:			#ffffff;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	margin-right:			2px;
+}
+
+#WingMenuPlugin ApplicationsView::item {
+	padding-left:			6px;
+	padding-right:			12px;
+	padding-top:			3px;
+	padding-bottom:			3px;
+
+	color:				#000000;
+	background:			transparent;
+}
+
+#WingMenuPlugin ApplicationsView::item:selected {
+	color:				#ffffff;
+	background:			#4b6983;
+}
+
+#WingMenuPlugin QToolButton, 
+#WingMenuPlugin #CategoryButton {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			none;
+
+	font:				normal;
+
+	padding:			0px;
+
+	margin-right:			1px;
+}
+
+#WingMenuPlugin QToolButton:hover, 
+#WingMenuPlugin #CategoryButton:hover, 
+#WingMenuPlugin #CategoryButton:selected {
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+}
+
+#WingMenuPlugin QToolButton:pressed {
+	color:				#000000;
+	background:			#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			2px;
+}
+
+#WingMenuPlugin #CategoryButton:pressed {
+	color:				#000000;
+	background:			#c4c2bd;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+/* Yes, those two need different padding sizes to create the same
+   illusion of a 1-pixel down/right movement on click. Don't ask
+   me why... */
+
+#WingMenuPlugin QLineEdit {
+	color:				#000000;
+	background:			#ffffff;
+
+	selection-color:		#ffffff;
+	selection-background-color:	#4b6983;
+
+	border:				2px solid transparent;
+	border-image:			url(active.png) 2;
+
+	margin:				2px;
+	padding:			2px;
+}
+
+#WingMenuPlugin QScrollBar {
+	color:				#000000;
+	background-color:		#c4c2bd;
+
+	width:				16px;
+
+	border:				1px solid transparent;
+	border-image:			url(trough.png) 1;
+}
+
+#WingMenuPlugin QScrollBar::handle {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+
+	margin:				1px;
+}
+
+#WingMenuPlugin QScrollBar::add-line,
+#WingMenuPlugin QScrollBar::sub-line,
+#WingMenuPlugin QScrollBar::add-page,
+#WingMenuPlugin QScrollBar::sub-page {
+        color:                          transparent;
+        background:                     transparent;
+
+        border:                         none;
+}
+
+#KbIndicator > QLabel, #KbIndicator > QToolButton {padding: 2px;}
+
+#KbIndicator #LayoutLabel {background: transparent;}
+
+#KbIndicator #CapsLockLabel {color: #808080; font: normal;}
+#KbIndicator #CapsLockLabel:enabled {color: #000000; font: bold;}
+#KbIndicator #CapsLockLabel:!enabled {color: #000000; font: normal;}
+#KbIndicator #CapsLockLabel:disabled {color: #808080; font: normal;}
+
+#KbIndicator #NumLockLabel {color: #808080; font: normal;}
+#KbIndicator #NumLockLabel:enabled {color: #000000; font: bold;}
+#KbIndicator #NumLockLabel:!enabled {color: #000000; font: normal;}
+#KbIndicator #NumLockLabel:disabled {color: #808080; font: normal;}
+
+#KbIndicator #ScrollLockLabel {color: #808080; font: normal;}
+#KbIndicator #ScrollLockLabel:enabled {color: #000000; font: bold;}
+#KbIndicator #ScrollLockLabel:!enabled {color: #000000; font: normal;}
+#KbIndicator #ScrollLockLabel:disabled {color: #808080; font: normal;}
+
+/* Backlight and Volume */
+#Backlight, #Volume {
+        color:                          #000000;
+        background:                     #dcdad5;
+}
+
+#Backlight SliderDialog, VolumePopup {
+        color:                          #000000;
+        background:                     #dcdad5;
+
+        border:                         2px solid transparent;
+        border-image:			url(menu.png) 2;
+}
+
+#Backlight > SliderDialog > QSlider,
+VolumePopup > QSlider {
+        color:                          #000000;
+        background:                     #dcdad5;
+
+        min-width:                      20px;
+        max-width:                      20px;
+        min-height:                     140px;
+        max-height:                     140px;
+
+	margin-top:			4px;
+	margin-bottom:			4px;
+}
+
+#Backlight > SliderDialog > QSlider::groove:vertical, 
+VolumePopup > QSlider::groove:vertical {
+	color:				#000000;
+	background:			#c4c2bd;
+
+	border:				1px solid transparent;
+	border-image:			url(trough.png) 1;
+
+	width:				16px;
+}
+
+#Backlight > SliderDialog > QSlider::sub-page:vertical,
+VolumePopup > QSlider::sub-page:vertical {
+}
+
+#Backlight > SliderDialog > QSlider::handle:vertical,
+VolumePopup > QSlider::handle:vertical {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent;
+	border-image:			url(button.png) 2;
+
+	width:				8px;
+	height:				24px;
+
+	margin:				1px;
+}
+
+#Backlight > SliderDialog > QToolButton,
+VolumePopup > QPushButton {
+	color:				#000000;
+	background:			#dcdad5;
+
+	border:				2px solid transparent; 
+	border-image:			url(button.png) 2;
+
+        qproperty-iconSize:             16px;
+
+	padding:			4px;
+
+	margin:				2px;
+}
+
+#Backlight > SliderDialog > QToolButton:hover,
+VolumePopup > QPushButton:hover {
+	border-image:			url(button.png) 2;
+}
+
+#Backlight > SliderDialog > QToolButton:pressed,
+VolumePopup > QPushButton:pressed {
+	background:			#c4c2bd;
+	border-image:			url(active.png) 2;
+}
+
+QCalendarWidget QWidget {
+	color:				#000000;
+	background:			#ffffff;
+}
+
+QCalendarWidget QAbstractItemView {
+        color:                          #000000;
+        background-color:               #ffffff;
+
+        alternate-background-color:     #dcdad5;
+}
+
+QCalendarWidget QAbstractItemView:enabled {
+        color:                          #000000;
+        background:                     #ffffff;
+
+        selection-color:                #ffffff;
+        selection-background-color:     #4b6983;        
+}
+
+QCalendarWidget QAbstractItemView:disabled {
+        color:                          #808080;
+	background:			#ffffff;
+}
+
+QCalendarWidget QMenu {
+        color:                          #000000;
+        background:                     #dcdad5;
+
+        border:                         2px solid transparent;
+	border-image:			url(menu.png) 2;
+}
+
+QCalendarWidget QToolButton {
+	color:				#000000;
+        background:                     #dcdad5;
+
+	border:				2px solid transparent;
+
+	margin:				2px;
+}
+
+QCalendarWidget QToolButton:hover {
+	border-image:			url(button.png) 2;
+}
+
+QCalendarWidget QToolButton:pressed {
+	background:			#c4c2bd;
+	border-image:			url(active.png) 2;
+
+	padding-top:			2px;
+	padding-left:			1px;
+}
+
+QCalendarWidget QToolButton::menu-indicator { /* Remove the down arrow */
+        image:                          none;
+}
+
+QCalendarWidget #qt_calendar_navigationbar {
+        color:                          #000000;
+        background:                     #dcdad5;
+
+        border:                         2px solid transparent;
+	border-image:			url(menu.png) 2;
+}
+
+QCalendarWidget #qt_calendar_prevmonth {
+        qproperty-icon:                 url(calendar-popup/arrow-left.png);
+        qproperty-iconSize:             16px;
+}
+
+QCalendarWidget #qt_calendar_nextmonth {
+        qproperty-icon:                 url(calendar-popup/arrow-right.png);
+        qproperty-iconSize:             16px;
+}

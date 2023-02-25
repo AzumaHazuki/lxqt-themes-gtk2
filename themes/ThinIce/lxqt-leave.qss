@@ -1,0 +1,93 @@
+/* The main Leave dialog window */
+QDialog {
+	color:				#000000;
+	background:			#d3d3dd;
+
+	border:				1px solid transparent;
+	border-image:			url(menu.png) 1;
+}
+
+/* Caption colors */
+QLabel {
+	color:				#000000;
+	background:			transparent;
+
+	padding:			8px;
+}
+
+/* Available actions - only partially themeable as of LXQt 1.2.x */
+QAbstractItemView {
+	color:				#000000;
+	background:			#e5e5f7; /* This doesn't work for some reason... */
+	background-image:		url(lxqt-leave/bg.png); /* ...but this does! */
+
+	border:				1px solid transparent;
+	border-image:			url(active.png) 1;
+}
+
+/* Button settings */
+QPushButton {
+        color:                          #000000;
+	background:			#d3d3dd;
+
+        padding-left:                   24px;
+        padding-right:                  24px;
+        padding-top:                    4px;
+        padding-bottom:			4px;
+
+	margin-left:			10px;
+	margin-right:			10px;
+
+        border:				1px solid transparent;
+	border-image:			url(menu.png) 1;
+}
+
+QToolButton {
+        color:                          #000000;
+	background:			#d3d3dd;
+
+        padding-left:                   6px;
+        padding-right:                  6px;
+        padding-top:                    4px;
+        padding-bottom:			4px;
+
+	margin-left:			10px;
+	margin-right:			10px;
+
+        border:				1px solid transparent;
+	border-image:			url(menu.png) 1;
+}
+
+QPushButton:hover, QToolButton:hover {
+        color:                          #000000;
+	background:			#d3d3dd;;
+
+        border:                         1px solid transparent;
+        border-image:                   url(menu.png) 1;
+}
+
+QPushButton:pressed {
+        color:                          #000000;
+	background:			#d3d3dd;;
+
+        border:                         1px solid transparent;
+        border-image:                   url(active.png) 1;
+
+        padding-left:                   24px;
+        padding-right:                  24px;
+        padding-top:                    4px;
+        padding-bottom:			4px;
+}
+
+QToolButton:pressed {
+        color:                          #000000;
+	background:			#d3d3dd;
+
+        border:                         1px solid transparent;
+        border-image:                   url(active.png) 1;
+
+        padding-left:                   6px;
+        padding-right:                  6px;
+        padding-top:                    4px;
+        padding-bottom:			4px;
+}
