@@ -1,0 +1,30 @@
+Notification {
+	color:			#000000;
+	background:		#dcdad5;
+
+	border:			2px solid transparent;
+	border-image:		url(menu.png) 2;
+}
+
+QLabel {
+	color:			#000000;
+}
+
+#closeButton {
+	border:			2px solid transparent;
+
+	qproperty-icon:		url(lxqt-notificationd/cancel.svg);
+	qproperty-iconSize:	16px;
+}
+
+#closeButton:hover {
+	border-image:		url(button.png) 2;
+}
+
+#closeButton:pressed {
+	border-image:		url(active.png) 2;
+}
+
+#appLabel {
+	font-weight:		bold;
+}

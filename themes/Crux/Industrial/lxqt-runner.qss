@@ -1,0 +1,137 @@
+/* Panel */
+#panel {
+	color:				#000000;
+	background:			#f6f6f6;
+
+	border:				2px solid transparent;
+	border-image:			url(menu.png) 2;
+}
+
+/* Buttons */
+QToolButton::menu-indicator {
+	image:				none;
+}
+
+#closeButton {
+	qproperty-icon:			url(lxqt-runner/close.svg);
+	qproperty-iconSize:		16px;
+
+        color:                          #000000;
+        background:                     #f6f6f6;
+
+        border:                         5px solid transparent;
+}
+
+#actionButton {
+	qproperty-icon:			url(lxqt-runner/down-arrow.svg);
+	qproperty-iconSize:		16px;
+
+        color:                          #000000;
+        background:                     #f6f6f6;
+
+        border:                         5px solid transparent;
+}
+
+#closeButton:hover, #actionButton:hover {
+        color:                          #000000;
+        background:                     #ffffff;
+
+        border:                         5px solid transparent;
+        border-image:                   url(button.png) 5;
+}
+
+#closeButton:pressed, #actionButton:pressed {
+        color:                          #000000;
+        background:                     #d1d1d1;
+
+        border:                         5px solid transparent;
+        border-image:                   url(active.png) 5;
+
+	padding:			-1px;
+}
+
+/* Command Box */
+#commandEd {
+        color:                          #000000;
+        background:                     #ffffff;
+
+        selection-color:                #ffffff;
+        selection-background-color:     #6484a4;
+
+        border:                         2px solid transparent;
+        border-image:                   url(entry.png) 2;
+
+        margin:                         2px;
+        padding:                        2px;
+
+        font:                           normal;
+}
+
+/* Search results list */
+#commandList {
+	background:			#ffffff;
+	color:				#000000;
+
+	selection-color:		#ffffff;
+	selection-background-color:	#6484a4;
+
+	alternate-background-color:	#ffffff;
+
+	border:				none;
+}
+
+#commandList::item, #commandList::item:alternate {
+	color:				#000000;
+	background:			#ffffff;
+}
+
+#commandList::item:hover, #commandList::item:selected {
+	color:                          #ffffff;
+        background:                     #6484a4;
+}
+
+/* Menus */
+QMenu {
+        color:                          #000000;
+        background:                     #f6f6f6;
+
+        border:                         2px solid transparent;
+        border-image:                   url(menu.png) 2;
+
+        min-width:                      100px;
+
+        font:                           normal;
+}
+
+QMenu::icon {
+        padding-left:                   7px;
+}
+
+QMenu::item {
+        border:                         2px solid transparent;
+
+        padding-left:                   6px;
+        padding-right:                  12px;
+        padding-top:                    3px;
+        padding-bottom:                 3px;
+
+        color:                          #000000;
+        background:                     transparent;
+}
+
+QMenu::item:selected {
+        color:                          #ffffff;
+        background:                     #6484a4;
+
+        border:                         2px solid transparent;
+        border-image:                   url(selected-menu-item.png) 2;
+}
+
+QMenu::item:disabled {
+        color:                          #808080;
+        background:                     transparent;
+}
+
+QMenu::indicator {
+        padding-left:                   6px;
+}
